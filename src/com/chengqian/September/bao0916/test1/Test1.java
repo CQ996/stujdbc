@@ -1,4 +1,4 @@
-package September.bao0916.test1;
+package com.chengqian.September.bao0916.test1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

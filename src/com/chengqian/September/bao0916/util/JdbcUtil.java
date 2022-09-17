@@ -1,15 +1,15 @@
-package September.bao0916.util;
+package com.chengqian.September.bao0916.util;
 
 import java.sql.*;
 
-//¹¤¾ßÀà: ½â¾öjdbc±àÂë¹ý³ÌÖÐµÄÖØ¸´´úÂë.
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: ï¿½ï¿½ï¿½jdbcï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½.
 public class JdbcUtil {
 
-    //ÉùÃ÷Îª¾²Ì¬¹²Ïí¶ÔÏó:
+    //ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
     public static Connection conn;
 
 
-    //¼ÓÔØ°²×°Çý¶¯.Ê¹ÓÃstatic{}´¦Àí.
+    //ï¿½ï¿½ï¿½Ø°ï¿½×°ï¿½ï¿½ï¿½ï¿½.Ê¹ï¿½ï¿½static{}ï¿½ï¿½ï¿½ï¿½.
     static{
         try {
             Class.forName( "com.mysql.cj.jdbc.Driver" );
@@ -18,9 +18,9 @@ public class JdbcUtil {
         }
     }
 
-    //´´½¨Á¬½Ó. Ìá¹©¾²Ì¬·½·¨Ê¹ÓÃ.
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½á¹©ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½.
     public static Connection createConn() throws SQLException {
-        //¸ÄÔìÊý¾Ý¿âÏà¹ØÁ¬½ÓÐÅÏ¢ÎªÁé»îµÄÅäÖÃÎÄ¼þÐÎÊ½: ÎÞÐèÖØÐ´´úÂë,¼´¿É·½±ãµ÷Õû.
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Ê½: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½É·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
         String url = "jdbc:mysql://localhost:3306/myschool2";
         String username = "root";
         String password = "111111";
@@ -30,7 +30,7 @@ public class JdbcUtil {
         return conn;
     }
 
-    //ÊÍ·Å×ÊÔ´.Ìá¹©¾²Ì¬·½·¨Ê¹ÓÃ.
+    //ï¿½Í·ï¿½ï¿½ï¿½Ô´.ï¿½á¹©ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½.
     public static void releaseConn(ResultSet rs , PreparedStatement pstm , Connection conn){
 
         try {

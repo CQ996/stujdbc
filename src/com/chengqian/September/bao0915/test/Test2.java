@@ -1,4 +1,4 @@
-package September.bao0915.test;
+package com.chengqian.September.bao0915.test;
 
 import com.mysql.pojo.Student;
 import com.mysql.utils.JdbcUtil;

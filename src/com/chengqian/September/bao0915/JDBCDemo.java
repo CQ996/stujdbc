@@ -1,6 +1,4 @@
-package September.bao0915;
-
-import com.mysql.jdbc.Driver;
+package com.chengqian.September.bao0915;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
