@@ -1,7 +1,7 @@
 package com.chengqian.September.bao0915.test;
 
-import com.mysql.pojo.Student;
-import com.mysql.utils.JdbcUtil;
+import com.chengqian.pojo.Student;
+import com.chengqian.utils.JdbcUtil;
 
 import java.sql.*;
 import java.util.ArrayList;

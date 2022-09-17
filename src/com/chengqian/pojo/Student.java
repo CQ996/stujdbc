@@ -1,4 +1,4 @@
-package com.mysql.pojo;
+package com.chengqian.pojo;
 
 /**
  * @ClassName Student

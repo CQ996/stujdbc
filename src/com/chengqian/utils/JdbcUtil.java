@@ -1,4 +1,4 @@
-package com.mysql.utils;
+package com.chengqian.utils;
 
 import java.io.IOException;
 import java.io.InputStream;

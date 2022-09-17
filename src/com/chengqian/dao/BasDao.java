@@ -1,4 +1,4 @@
-package com.mysql.dao;
+package com.chengqian.dao;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,8 +1,8 @@
 package com.chengqian.September.bao0915.test;
 
 
-import com.mysql.dao.StudentDao;
-import com.mysql.pojo.Student;
+import com.chengqian.dao.StudentDao;
+import com.chengqian.pojo.Student;
 
 import java.util.List;
 

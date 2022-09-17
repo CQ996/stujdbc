@@ -1,6 +1,6 @@
-package com.mysql.dao;
+package com.chengqian.dao;
 
-import com.mysql.pojo.Student;
+import com.chengqian.pojo.Student;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
