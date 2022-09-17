@@ -1,6 +1,6 @@
 package com.chengqian.September.bao0917;
 
-import com.mysql.pojo.Student;
+import com.chengqian.pojo.Student;
 
 import java.io.IOException;
 import java.io.InputStream;
