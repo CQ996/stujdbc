@@ -38,7 +38,7 @@ public class JdbcTest {
 }
 
 //----------------------------------------------BasDao：加载驱动，建立连接，释放资源，查询功能，增删改功能-------------------
-class BasDao{
+class BaseDao {
 
     //将配置文件信息定义为全局变量，以方便使用
     static String driver = null;
@@ -55,7 +55,7 @@ class BasDao{
     //-----------静态代码块加载配置文件中的驱动
     static{
         //获取类加载器，将资源作为流获取
-        InputStream is = BasDao.class.getClassLoader().getResourceAsStream("dbinfo.properties");
+        InputStream is = BaseDao.class.getClassLoader().getResourceAsStream("dbinfo.properties");
         //new一个Properties对象，以方便我们加载 "dbinfo.properties" 配置文件中的信息
         Properties pro = new Properties();
 
@@ -187,7 +187,7 @@ class BasDao{
 
 
 //-----------------------------------------------借助父类：BasDao优化-------------------------------------------------
-class StudentDao extends BasDao{
+class StudentDao extends BaseDao {
     //模拟查询学生：
     public List queryStudent() {
         //1.提供sql
