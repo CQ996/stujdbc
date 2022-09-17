@@ -1,7 +1,9 @@
 package com.chengqian.September.bao0917;
 
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.pool.DruidDataSourceFactory;
+import com.alibaba.druid.pool.DruidPooledConnection;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -12,6 +14,7 @@ import java.util.Properties;
 /**
  * @ClassName DruidTest
  * @Description TODO
+ * 连接池创建与演示
  * @Author CQ
  * @Date 2022/9/17 9:42
  * @Version 1.0
@@ -21,10 +24,26 @@ public class DruidTest {
         //1.加载druid
 
         //2.数据源连接池：创建
+
+        //方式一：
+        DruidDataSource dataSource1 = new DruidDataSource();
+        dataSource1.setUrl("jdbc:mysql://localhost:3306/myschool2");
+        dataSource1.setUsername("root");
+        dataSource1.setPassword("111111");
+        dataSource1.setInitialSize(5);
+        dataSource1.setMaxActive(10);
+        dataSource1.setMaxWait(6000);
+
+        System.out.println("第一种方式创建的连接池"+dataSource1);
+        DruidPooledConnection conn1 = dataSource1.getConnection();
+        System.out.println("从连接池中解析的连接对象为："+conn1);
+
+
+
+        //方式二：
         InputStream is = DruidTest.class.getClassLoader().getResourceAsStream("druid-1.properties");
         Properties pro = new Properties();
         pro.load(is);
-
         DataSource dataSource = DruidDataSourceFactory.createDataSource(pro);
 
         //3.指定或设置连接池的相关参数
